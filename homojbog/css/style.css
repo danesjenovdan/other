@@ -1,0 +1,309 @@
+@font-face {
+  font-family: 'Archivo Narrow';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Archivo Narrow Regular'), local('ArchivoNarrow-Regular'), url(https://themes.googleusercontent.com/static/fonts/archivonarrow/v2/DsLzC9scoPnrGiwYYMQXpnd-At88qgtmonwzrTIRZp4.woff) format('woff');
+}
+
+body {
+	background: url(../img/bck_pattern.png) repeat;
+	font-family: 'Archivo Narrow', sans-serif;
+}
+
+h1 {
+	color: #ffffff;
+	font-size: 2em;
+	vertical-align: middle;
+	margin-top: 1.7em;
+}
+
+h2 {
+	color: #ffffff;
+	font-size: 16px;
+	line-height: 16px;
+}
+
+.row {
+	margin-bottom: 2em;
+}
+
+.wrap {
+	position: relative;
+}
+
+.box {
+	width: 100%;
+	height: 151px;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	overflow: hidden;
+}
+.box img {
+	width: 100%;
+}
+.overlay:hover {
+	opacity: 0.6;
+}
+
+.overlay {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	opacity: 0;
+	background-color: #cfcfcf;
+	width: 100%;
+}
+.play {
+	position: relative;
+	font-size: 50px;
+	left: 100px;
+	top: 50px;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+}
+.play:hover {
+	color: #bf4d0a;
+}
+.social {
+	font-size: 20px;
+	line-height: 30px;
+	position: absolute;
+	left: 230px;
+	top: 40px;
+	height: 100%;
+	text-align: center;
+	width: 25px;
+	cursor: pointer;
+}
+.social i:hover {
+	color: #179192;
+}
+.social * {
+	margin-bottom: 10px;
+}
+.socialbig {
+	width: 100%;
+	height: 50px;
+}
+.socialbig i {
+	font-size: 35px;
+	margin: 10px;
+}
+.socialbig i:first-child {
+	margin-left: -25px;
+}
+.socialbig i:hover {
+	color: #cfcfcf;
+	cursor: pointer;
+}
+.video {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	opacity: 0;
+}
+
+.turquoise {
+	background-color: #179192;
+}
+.orange {
+	background-color: #bf4d0a;
+}
+
+.first {
+	margin-top: 2em;
+}
+
+#dndmainnav ul{padding: 0; margin: 0;}
+#dndmainnav ul li {
+    float: left;
+    list-style: none outside none;
+    margin: 0;
+    padding: 10px 0 0;
+}
+#dndmainnav ul li:first-child a{
+  padding-left: 0;
+}
+#dndmainnav ul li:last-child a{
+  border-right: none;
+}
+#dndmainnav ul li a {
+    border-right: 1px solid #ACACAC;
+    color: #ACACAC;
+    font-size: 12px;
+    font-family: 'Archivo Narrow', sans-serif;
+    margin: 0;
+    padding: 0 10px;
+}
+#dndmainnav ul li a:active,
+#dndmainnav ul li a:visited,
+#dndmainnav ul li a:link
+{
+  text-decoration: none;
+  color: #ACACAC;
+}
+#dndmainnav ul li a:hover,
+#dndmainnav ul li:hover a
+{
+  text-decoration: none;
+  color: #636363;
+}
+
+
+#dndmainnav ul li.active,#dndmainnav ul li:hover {
+    border-top: 5px solid #327F7F;
+    padding: 5px 0 0 0;
+}
+#dndmainnav ul li.active a {
+    color: #636363;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.upload {
+	margin-top: 1.2em;
+	border-radius: 0px !important;
+}
+
+.btn {
+	border-radius: 0px !important;
+}
+
+.fb-like-box {
+	margin-left: 35px;
+	margin-top: -5px;
+}
+
+.footy {
+	background-image: url('../img/footer_pattern.png');
+	overflow: hidden;
+}
+
+/* Large desktop */
+@media (min-width: 980px) and  (max-width: 1200px) {
+	h1 {
+		margin-top: 1.4em;
+	}
+	.box {
+		height: 123px;
+	}
+	.overlay {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		height: 123px;
+		opacity: 0;
+		background-color: #cfcfcf;
+		width: 100%;
+	}
+	.play {
+		position: relative;
+		font-size: 40px;
+		left: 90px;
+		top: 40px;
+		cursor: pointer;
+		width: 40px;
+		height: 40px;
+	}
+	.play:hover {
+		color: #bf4d0a;
+	}
+	.social {
+		font-size: 20px;
+		line-height: 25px;
+		position: absolute;
+		left: 180px;
+		top: 25px;
+		height: 100%;
+		text-align: center;
+		width: 25px;
+		cursor: pointer;
+	}
+	.social i:hover {
+		color: #179192;
+	}
+	#send {
+		display: none;
+	}
+	.upload {
+		width: 80%;
+	}
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+	.box {
+		height: 93px;
+	}
+	h1 {
+		margin-top: 0.9em;
+	}
+	.overlay {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		height: 93px;
+		opacity: 0;
+		background-color: #cfcfcf;
+		width: 100%;
+	}
+	.play {
+		position: relative;
+		font-size: 40px;
+		left: 60px;
+		top: 25px;
+		cursor: pointer;
+		width: 40px;
+		height: 40px;
+	}
+	.play:hover {
+		color: #bf4d0a;
+	}
+	.social {
+		font-size: 20px;
+		line-height: 25px;
+		position: absolute;
+		left: 130px;
+		top: 10px;
+		height: 100%;
+		text-align: center;
+		width: 25px;
+		cursor: pointer;
+	}
+	.social i:hover {
+		color: #179192;
+	}
+	.socialbig {
+		margin-top: -25px;
+	}
+	#send {
+		display: none;
+	}
+	.upload {
+		width: 80%;
+		margin-top: 0.5em;
+		border-radius: 0px !important;
+		font-size: 12px !important;
+		line-height: 14px !important;
+		height: 14px !important;
+	}
+
+	.btn {
+		border-radius: 0px !important;
+		font-size: 12px;
+		line-height: 12px;
+		height: 14px;
+		margin-top: -10px;
+	}
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { ... }
+
+/* Landscape phones and down */
+@media (max-width: 480px) { ... }

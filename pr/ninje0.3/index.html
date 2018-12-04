@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>DJND ninja</title>
+
+		<meta name="description" content="Postani DJND ninja description.">
+		<meta name="author" content="Danes je nov dan, inštitut za druga vprašanja">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/ninja.css" id="theme">
+		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,200,600,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$("#hide").click(function(){
+				$("p").hide();
+			});
+			$("#show").click(function(){
+				$("p").show();
+			});
+		});
+		</script>
+			<script>
+			function allowDrop(ev) {
+				ev.preventDefault();
+			}
+
+			function drag(ev) {
+				ev.dataTransfer.setData("text", ev.target.id);
+			}
+
+			function drop(ev) {
+				ev.preventDefault();
+				var data = ev.dataTransfer.getData("text");
+				ev.target.appendChild(document.getElementById(data));
+			}
+			</script>
+			<style>
+			#div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+			</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background="#1d7373">
+					<div>
+					<h2 style="color:#fff;">NINJE 0.3</h1>
+					</br>
+					<p style="color:#fff;">
+						<small><a href="http://danesjenovdan.si">Danes je nov dan</a> / <a href="http://twitter.com/danesjenovdan">@danesjenovdan</a></small></br>
+					</p>
+					</div>
+				</section>
+                
+                <section data-background="#6BA8A0">
+                    <section>    
+						<h2>NAVIGACIJA</h2>
+					</section>
+					
+					<section> 
+						<p style="font-weight:700;">classic menu</p>
+						<a href="http://getbootstrap.com/components/#nav" target="_blank"><img src="img/menu.png"></a>
+					</section>
+					
+					<section>
+						<p style="font-weight:700;">megamenu </p>	
+						<a href="http://wpmegamenu.com/megamenu/" target="_blank"><img src="img/megamenu.png"></a>
+					</section>
+					
+					<section>  
+						<p style="font-weight:700;">hamburger menu</p>
+						<a href="http://tympanus.net/Development/ResponsiveMultiLevelMenu/index2.html" target="_blank"><img src="img/hamburger.png"></a>
+
+					</section>
+					
+					<section>    
+						<p style="font-weight:700;">breadcrumbs</p>
+						<a href="http://getbootstrap.com/components/#breadcrumbs" target="_blank"><img src="img/breadcrumbs.png"></a>
+					</section>
+					
+					<section> 
+						<p style="font-weight:700;">pagination</p>
+						<a href="http://getbootstrap.com/components/#pagination-default" target="_blank"><img src="img/pagination.png"></a>
+						
+
+					</section>
+					
+					<section>    
+						<a href="http://isotope.metafizzy.co/v1/demos/infinite-scroll.html" target="_blank"><p style="font-weight:700;">endless scroll</p>
+						</a>
+					</section>
+                </section>
+					
+                <section data-background="#DD786B">
+					<section>    
+                        <h2>INPUT TYPES</h2>
+					</section>
+					<section>    
+                        <h3 style="font-weight:700;">Single value select</h3>
+					</section>
+					
+					<section>    
+						<p style="font-weight:700;">toggle</p></br>
+						<p>If you click on the "Hide" button, I will disappear.</p>
+
+						<button id="hide">Turn off</button>
+						<button id="show">Turn on</button>
+					</section>
+					
+					<section>    
+						<p style="font-weight:700;">slider</p></br>
+						<form action="action_page.php" method="get">
+						  Points:
+						  <input type="range" name="points" min="0" max="10">
+						  <input type="submit">
+						</form>
+					</section>
+					
+					<section>    
+						<p style="font-weight:700;">date picker</p></br>
+						<p>
+						<form action="action_page.php">
+						  Birthday:
+						  <input type="date" name="bday">
+						  <input type="submit">
+						</form>
+					</section>
+					
+					<section>    
+						<p style="font-weight:700;">color picker</p></br>
+						<form action="action_page.php">
+						  Select your favorite color:
+						  <input type="color" name="favcolor" value="#ff0000">
+						  <input type="submit">
+						</form>
+					</section>
+								
+					<section>    
+						<p style="font-weight:700;">radio buttons</p></br>
+						<form action="action_page.php">
+						<input type="radio" name="sex" value="male" checked>Male
+						<br>
+						<input type="radio" name="sex" value="female">Female
+						</form>
+					</section>
+					
+					<section>    
+						<p style="font-weight:700;">drag and drop</p>
+						<a href="http://demo.vaadin.com/sampler/#ui/drag-drop/drag-components" target="_blank"><img src="img/draganddrop.png"></a>
+					</section>
+					
+					<section>    
+						<p style="font-weight:700;">dropdown menu</p></br>
+						<form action="action_page.php">
+						<select name="cars">
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						</select>
+						</form>
+					</section>
+
+					<section>    
+                        <h3 style="font-weight:700;">multi-value select</h3>
+					</section>
+					
+					<section>    
+						<p style="font-weight:700;">checkboxes</p></br>
+						<form action="action_page.php">
+						<input type="checkbox" name="vehicle" value="Bike">I have a bike
+						<br>
+						<input type="checkbox" name="vehicle" value="Car">I have a car 
+						</form> 
+					</section>
+					
+					<section>    
+						<p style="font-weight:700;">combobox</p>
+						<a href="http://demo.vaadin.com/sampler/#ui/data-input/multiple-value/combo-box" target="_blank"><img src="img/combobox.png"></a>
+					</section>
+					
+					<section>    
+						<p style="font-weight:700;">multiple select combobox</p>
+						<a href="https://select2.github.io/examples.html" target="_blank"><img src="img/multipleselect.png"></a>
+					</section>
+					
+					<section>    
+						<p style="font-weight:700;">list select</p>
+						<a href="http://demo.vaadin.com/sampler/#ui/data-input/multiple-value/list-select" target="_blank"><img src="img/listselect.png"></a>
+					</section>
+								
+					<section>    
+						<p style="font-weight:700;">list builder</p>
+						<a href="http://demo.vaadin.com/sampler/#ui/data-input/multiple-value/list-builder" target="_blank"><img src="img/listbuilder.png"></a>
+
+					</section>
+					
+					<section>    
+                        <h3 style="font-weight:700;">search</h3>
+					</section>
+					
+					<section>    
+						<p style="font-weight:700;">search po celem sajtu</p></br>
+						<form action="action_page.php">
+						  <p>Išči:</p>
+						  <input type="search" name="googlesearch">
+						  <input type="submit">
+						</form>
+
+					</section>
+					
+					<section>    
+						<p style="font-weight:700;">autocomplete search</p>
+						<a href="https://www.google.com/" target="_blank"><img src="img/autocomplete.png"></a>
+					</section>
+					
+					<section>    
+						<p style="font-weight:700;">search znotraj dela sajta</p>
+						<a href="https://projects.invisionapp.com/d/main#/console/3016049/66876422/preview" target="_blank"><img src="img/insidesearch.png"></a>
+
+					</section>
+
+					<section>    
+                        <h3 style="font-weight:700;">tekstovni inputi</h3>
+					</section>
+					
+					<section>    
+						<p style="font-weight:700;">text field</p></br>
+						<form action="action_page.php">
+						<input type="text" name="firstname">
+						<br>
+						</form>
+					</section>
+					
+					<section>    
+						<p style="font-weight:700;">text area</p></br>
+						<form action="action_page.php">
+						<textarea name="message" rows="10" cols="30">
+						The cat was playing in the garden.
+						</textarea>
+						</form>
+					</section>
+					
+					<section>    
+						<p style="font-weight:700;">rich text area</p>
+						<a href="http://demo.vaadin.com/sampler/#ui/data-input/text-input/rich-text-area"><img src="img/richtextarea.png"></a>
+					</section>
+					
+					<section>    
+						<p style="font-weight:700;">password field</p></br>
+						<form action="">
+						<p>User name:</p>
+						<input type="text" name="userid">
+						<br>
+						<p>User password:<p>
+						<input type="password" name="psw">
+						</form>
+					</section>
+					
+					<section>    
+                        <h3 style="font-weight:700;">ok / submit button</h3>
+						<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+					</section>
+                </section>
+              
+			
+                <section data-background="#6BA8A0">
+                    
+                    <section>
+                        <h2>CONTENT PRESENTATION CONTROLS</h2>
+                    </section>
+					
+                    <section>
+						<p style="font-weight:700;">hover / mouseover / tooltip (en rich, en plain!)</p>
+						<a href="http://demo.vaadin.com/sampler/#ui/basic-features/tooltip" target="_blank"><img src="img/tooltip.png"></a>
+                    </section>
+					
+                    <section>
+                        <p style="font-weight:700;">lightbox</p>
+						<a href="http://danesjenovdan.si/dolzni/" target="_blank"><img src="img/lightbox.png"></a>
+                    </section>
+					
+                    <section>
+						<p style="font-weight:700;">tabs</p>
+						<a href="http://demo.vaadin.com/sampler/#ui/structure/tab-sheet" target="_blank"><img src="img/tabs.png"></a>
+					</section>
+					
+                    <section>
+                        <p style="font-weight:700;">accordion</p>
+						<a href="http://demo.vaadin.com/sampler/#ui/structure/accordion" target="_blank"><img src="img/accordion.png"></a>
+					</section>
+					
+                    <section>
+						<p style="font-weight:700;">carousel</p>
+						<a href="http://bxslider.com/examples/carousel-demystified" target="_blank"><img src="img/carousel.png"</a>
+					</section>
+
+                </section>
+
+
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

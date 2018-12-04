@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="charts, charts build, google charts api"/>
+    <meta name="description" content="Online Charts Builder based on Google Charts API"/>
+    <title>Online Charts Builder</title>
+    <meta name="theme-color" content="#ffffff">
+    <link rel="profile" href="https://gmpg.org/xfn/11"/>
+    <link rel="canonical" href="https://danesjenovdan.si/grafi/"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/handsontable/0.31.0/handsontable.full.min.css"/>
+    <link rel="stylesheet" href="css/handsontable.bootstrap.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handsontable/0.31.0/handsontable.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/hot.js"></script>
+    <script src="js/chart.js"></script>
+    <!-- Load the AJAX API -->
+    <script src="https://www.google.com/jsapi"></script>
+    <script>
+        // Load the Visualization API and the charts package.
+        google.load('visualization', '1.0', {'packages':['table', 'corechart', 'charteditor']});
+    </script>
+    <script>
+        $(function(){
+            hot.init();
+            chart.init();
+
+            $('#chart-editor').click(chart.edit);
+            $('#chart-editor-link').click(chart.edit);
+            $('#chart-generate').click(chart.embed);
+
+            $('#clear').click(hot.clear);
+            $('#add-col').click(hot.addColumn);
+            $('#add-row').click(hot.addRow);
+            $('#add-row-10').click(function() {
+                hot.addRows(10);
+            });
+
+            var data;
+            if (data = getHashValue('d')) {
+                data = JSON.parse(decodeURIComponent(data));
+                chart.load(data);
+                hot.load(data);
+            }
+
+        });
+
+        function getHashValue(key) {
+            try {
+                return location.hash.match(new RegExp(key + '=([^&]*)'))[1];
+            } catch (e) {
+                // not found key
+            }
+        }
+    </script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Charts Builder</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <!-- <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li> -->
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    <!-- /navbar -->
+    <!-- container -->
+    <div class="container theme-showcase" role="main">
+        <div class="row">
+            <div class="col-xs-12 col-md-8" role="main">
+                <!-- Main jumbotron for a primary marketing message or call to action -->
+                <div class="jumbotron">
+                    <h1>Charts Builder</h1>
+                    <p>Service for work with <a href="https://developers.google.com/chart/">Google Charts API</a>.
+                        The Google Chart API lets you dynamically generate charts.</p>
+                    <p>You can try to update input data and <a id="chart-editor-link" href="#">change style of chart</a></p>
+                </div>
+
+                <h3>Data:</h3>
+                <div id="hot"></div>
+                <div class="btn-group" role="group">
+                    <button id="add-row" type="button" class="btn btn-default btn-sm" title="Add Row">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        Row
+                    </button>
+                    <button id="add-row-10" type="button" class="btn btn-default btn-sm" title="Add 10 Rows">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        10
+                    </button>
+                </div>
+                <button id="add-col" type="button" class="btn btn-default btn-sm pull-right" title="Add Column">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    Col
+                </button>
+                <button id="clear" type="button" class="btn btn-danger btn-sm" title="Clean">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                </button>
+                <br/>
+                <br/>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div id="preview" class="affix panel panel-default">
+                    <div class="panel-heading">
+                        Preview
+                    </div>
+                    <div class="panel-body">
+                        <div id="chart"></div>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="btn-group" role="group">
+                            <button id="chart-generate" type="button" class="btn btn-primary">Generate</button>
+                            <button id="chart-editor" type="button" class="btn btn-default">Edit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-8">
+                <h3>Options: Size</h3>
+                <form id="options" action="">
+                    <div id="options-size">
+                        <div data-toggle="buttons">
+                            <label class="btn btn-default">
+                                <input type="radio" name="size" autocomplete="off" value="1280x1024"> 1280x1024
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="radio" name="size" autocomplete="off" value="1027x768"> 1027x768
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="radio" name="size" autocomplete="off" value="800x600"> 800x600
+                            </label>
+                            <label class="btn btn-default active">
+                                <input type="radio" name="size" autocomplete="off" value="640x480" checked> 640x480
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="radio" name="size" autocomplete="off" value="320x240"> 320x240
+                            </label>
+                            <br/>
+                            <br/>
+                            <label class="btn btn-default">
+                                <input type="radio" name="size" autocomplete="off" value="1200x1200"> 1200x1200
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="radio" name="size" autocomplete="off" value="1000x1000"> 1000x1000
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="radio" name="size" autocomplete="off" value="800x800"> 800x800
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="radio" name="size" autocomplete="off" value="640x640"> 640x640
+                            </label>
+                            <label class="btn btn-default">
+                                <input type="radio" name="size" autocomplete="off" value="320x320"> 320x320
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- /container -->
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <p>
+                &copy; 2011-2018 Charts Builder. All rights reserved.<br/>
+                Developed by <a href="http://anton.shevchuk.name" title="Anton Shevchuk: web-developer" target="_blank">Anton Shevchuk</a>
+            </p>
+        </div>
+    </footer>
+    <!-- /footer -->
+    <!-- modal -->
+    <div class="modal fade" id="embed-modal" tabindex="-1" role="dialog" aria-labelledby="embedLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="embedLabel">Charts is ready!</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="col-md-offset-2">
+                        Copy one of follow code (link to HTML page or embedded HTML code)
+                    </p>
+                    <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="embed-url" class="col-sm-2 control-label">URL</label>
+                        <div class="col-sm-10">
+                            <input type="url" class="form-control" id="embed-url" placeholder="" onclick="this.select();" readonly />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="embed-html" class="col-sm-2 control-label">HTML</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="embed-html" placeholder="" onclick="this.select();" readonly />
+                        </div>
+                    </div>
+                    </form>
+                    <iframe id="embed-iframe" frameborder="0"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /modal -->
+</body>
+</html>

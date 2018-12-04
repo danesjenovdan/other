@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>DJND ninja</title>
+
+		<meta name="description" content="Postani DJND ninja description.">
+		<meta name="author" content="Danes je nov dan, inštitut za druga vprašanja">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/ninja.css" id="theme">
+		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,200,600,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$("#hide").click(function(){
+				$("p").hide();
+			});
+			$("#show").click(function(){
+				$("p").show();
+			});
+		});
+		</script>
+			<script>
+			function allowDrop(ev) {
+				ev.preventDefault();
+			}
+
+			function drag(ev) {
+				ev.dataTransfer.setData("text", ev.target.id);
+			}
+
+			function drop(ev) {
+				ev.preventDefault();
+				var data = ev.dataTransfer.getData("text");
+				ev.target.appendChild(document.getElementById(data));
+			}
+			</script>
+			<style>
+			#div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+			</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background="#1d7373">
+					<div>
+					<h2 style="color:#fff;">WEB DIZAJN NINJE</h1>
+					</br>
+					<p style="color:#fff;">
+						<small><a href="http://danesjenovdan.si">Danes je nov dan</a> / <a href="http://twitter.com/danesjenovdan">@danesjenovdan</a></small></br>
+					</p>
+					</div>
+				</section>
+                
+                <section data-background="#6BA8A0">
+                    <section>    
+						<h2>KAJ JE WEB DESIGN?</h2>
+					</section>
+					
+					<section> 
+						<p style="font-weight:700;">Naloga dizajna ni olepšati stvari, ampak jih narediti uporabne in sporočilne!</p>
+					</section>
+					
+					<section>
+						<p style="font-weight:700;">Uporabnost (user centered design)</p></br>
+						<p style="font-weight:700;">User experience design / User interface design</p>	
+					</section>
+					
+				
+                </section>
+					
+                <section data-background="#DD786B">
+					<section>    
+                        <h2>SPLOŠNE SMERNICE</h2>
+					</section>
+					
+					<section>    
+                        <p style="font-weight:700;">Stil oblikovanja odvisen od namena spletnega mesta / </br>Kaj želimo komunicirati?</p>
+					</section>
+					
+					<section>    
+						<p style="font-weight:700;">Branje od leve proti desni</p></br>
+						<p style="font-weight:700;">Konsistentnost elementov / navade uporabnikov!</p>
+					</section>
+					
+					<section>    
+						<p style="font-weight:700;">Mobile ali desktop first </p>
+					</section>
+					
+					<section>    
+						<p><span style="font-weight:700;">Organizacija vsebin:</span> jasna in konsistentna struktura</p></br>
+						<p><span  style="font-weight:700;">Ekonomizacija:</span> narediti več z manj (jasnost, preprostost, razločnost in poudarjenost vsebin)</p></br>
+						<p><span style="font-weight:700;">Komunikacija:</span> prezentacija vsebin se mora ujemati s sposobnostmi uporabnika</p>
+						<p>
+					</section>
+
+					<section>    
+						<p style="font-weight:700;">Elementi oblikovanja:</p>
+						<ul>
+						<li>LAYOUT</li>
+						<li>BARVE</li>
+						<li>TIPOGRAFIJA</li>
+						<li>SLIKOVNO GRADIVO</li>
+						<li>ANIMACIJE / TRANZICIJE</li>
+						</ul>
+					</section>
+					
+                </section>
+              
+			
+                <section data-background="#6BA8A0">
+                    
+                    <section>
+                        <h2>LAYOUT</h2>
+                    </section>
+					
+                    <section>
+						<p style="font-weight:700;">Breakpoints</p>
+						<img src="img/breakpoints.png">
+                    </section>
+					
+                    <section>
+						<p style="font-weight:700;">Grid / mreža</p>
+						<p>organizacija / postavitev elementov na spletnem mestu</p>
+						<img src="img/grid.png">
+                    </section>
+					
+                    <section>
+						<p style="font-weight:700;">White space</p>
+						<p>Mikro prostor (med posameznimi elementi) / makro prostor (med skupinami elementov)</p>
+						<img src="img/whitespace.png">
+                    </section>
+					
+                </section>
+
+                <section data-background="#DD786B">
+					<section>    
+                        <h2>BARVE</h2>
+					</section>
+					
+					<section>    
+                      <img src="img/barve.png">
+					</section>
+					
+                    <section>
+						<p style="font-weight:700;">Barvne sheme</p>
+						<p>monokromatska, analogna, komplementarna, razcepljena komplementarna, triada</p>
+						<img src="img/barvesheme.png">
+                    </section>
+					
+                    <section>
+						<img src="img/kontrast.png">
+						<p><a href="http://www.dasplankton.de/ContrastA/" target="_blank">merjenje kontrasta</a></p>
+                    </section>
+					
+                    <section>
+						<img src="img/pomen.png">
+                    </section>
+                </section>
+			
+                <section data-background="#6BA8A0">
+                    
+                    <section>
+                        <h2>TIPOGRAFIJA</h2>
+                    </section>
+                    <section>
+						<p style="font-weight:700;">Berljivost vs. okras</p>
+						<img src="img/berljivost.png">
+                    </section>
+					
+                    <section>
+						<img src="img/berljivost2.png">
+                    </section>
+					
+                    <section>
+						<img src="img/font.png">
+                    </section>
+					
+                    <section>
+						<p style="font-weight:700;">Hierarhija</p>
+						<img src="img/hierarhija1.png">
+                    </section>
+
+                    <section>
+						<img src="img/hierarhija2.png">
+                    </section>
+					
+                    <section>
+						<img src="img/debeline.png">
+                    </section>
+					
+                    <section>
+						<p>Web safe fonts vs. @font-face</p>
+                    </section>
+                </section>
+
+                <section data-background="#DD786B">
+					<section>    
+                        <h2>SLIKOVNO GRADIVO</h2>
+					</section>
+					
+					<section>    
+                        <p style="font-weight:700;">Ikone</p>
+						<p>slika / .svg / pisava</p>
+						<img src="img/ikone.jpg">
+					</section>
+					
+					<section>    
+                        <p style="font-weight:700;">Slike</p>
+						<p>optimizirane za splet</p>
+						<img src="img/slike.png">
+					</section>
+                </section>
+			
+                <section data-background="#6BA8A0">
+                    
+                    <section>
+                        <h2>ANIMACIJE / TRANZICIJE</h2>
+                    </section>
+					
+                    <section>
+						<img src="img/tranzicija.gif">
+                    </section>
+					
+                    <section>
+                        <img src="img/tranzicija2.gif">
+                    </section>
+					
+                    <section>
+                        <img src="img/tranzicija3.gif">
+                    </section>
+					
+                </section>
+
+                <section data-background="#DD786B">
+					<section>    
+                        <h2>VIRI</h2>
+					</section>
+					
+					<section>    
+                        <p style="font-weight:700;"><a href="https://docs.google.com/document/d/1-PAIpjdHGtDoK4zT9KG7gRiRQMunyqqEE8PZ92c9YG8/edit" target="_blank">Seznam virov</a></p>
+					</section>
+					
+                </section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

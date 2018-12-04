@@ -1,0 +1,189 @@
+    <div id="intro" class="intro">
+      <div class="container">
+<section class="row">
+  <div class="span6">
+    <div class="flex-video widescreen"><iframe src="//player.vimeo.com/video/51066544" frameborder="0" allowfullscreen=""></iframe></div>
+  </div>
+  <div class="span6">
+    ...
+  </div>
+</section>
+
+    </div>
+	</div>
+	
+	
+	    <!-- Call to Action -->
+    <div id="call-to-action" class="call-to-action">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center">
+            <h2>Nakup</h2>
+			          </div>
+        </div>
+		<div class="row">
+		<div class="col-md-5 col-md-offset-1">
+		<form class="form-horizontal">
+			<fieldset>
+				
+				<div class="control-group">
+			  <label class="control-label" for="radios">Model</label>
+			  <div class="controls">
+				<label class="radio" for="radios-0">
+				  <input type="radio" name="radios" id="radios-0" value="Option one" checked="checked">
+				  Original (40 eur)
+				</label>
+				<label class="radio" for="radios-1">
+				  <input type="radio" name="radios" id="radios-1" value="Option two">
+				  Special (60 eur)
+				</label>
+				<label class="radio" for="radios-1">
+				  <input type="radio" name="radios" id="radios-1" value="Option two">
+				  Custom (samo oddaj povpra&#353;evanje)
+				</label>
+			  </div>
+			</div>
+			
+			<!-- Text input-->
+			<div class="control-group">
+			  <label class="control-label" for="ime">Koli&#269;ina</label>
+			  <div class="controls">
+				<input id="kolicina" name="kolicina" type="text" placeholder="" class="input-xlarge">
+				
+			  </div>
+			</div>
+			
+			<!-- Multiple Radios -->
+			<div class="control-group">
+			  <label class="control-label" for="radios">Embala&#382;a</label>
+			  <div class="controls">
+				<label class="radio" for="radios-0">
+				  <input type="radio" name="radios" id="radios-0" value="Option one" checked="checked">
+				  jutina vre&#269;a z vrvjo iz konoplje (+5 eur)
+				</label>
+				<label class="radio" for="radios-1">
+				  <input type="radio" name="radios" id="radios-1" value="Option two">
+				  brez embala&#382;e
+				</label>
+			  </div>
+			</div>
+			
+			<div class="control-group">
+			  <label class="control-label" for="radios">Na&#269;in prevzema</label>
+			  <div class="controls">
+				<label class="radio" for="radios-0">
+				  <input type="radio" name="radios" id="radios-0" value="Option one" checked="checked">
+				  po po&#353;ti
+				</label>
+				<label class="radio" for="radios-1">
+				  <input type="radio" name="radios" id="radios-1" value="Option two">
+				  osebni prevzem (v Ljubljani in Mozirju)
+				</label>
+			  </div>
+			</div>
+			
+						<!-- Text input-->
+			<div class="control-group">
+			  <label class="control-label" for="ime">Skupaj cena</label>
+			  <div class="controls">
+				<input id="kolicina" name="kolicina" type="text" placeholder="" class="input-xlarge">
+				
+			  </div>
+			</div>
+
+			
+
+			</fieldset>
+</form>
+	</div>
+			<div class="col-md-6">
+				<form class="form-horizontal">
+<fieldset>
+			
+			<!-- Text input-->
+			<div class="control-group">
+			  <label class="control-label" for="ime">Ime</label>
+			  <div class="controls">
+				<input id="ime" name="ime" type="text" placeholder="" class="input-xlarge">
+				
+			  </div>
+			</div>
+			<div class="control-group">
+			  <label class="control-label" for="ime">Priimek</label>
+			  <div class="controls">
+				<input id="priimek" name="priimek" type="text" placeholder="" class="input-xlarge">
+				
+			  </div>
+			</div>
+			<div class="control-group">
+			  <label class="control-label" for="ime">Naslov</label>
+			  <div class="controls">
+				<input id="naslov" name="naslov" type="text" placeholder="" class="input-xlarge">
+				
+			  </div>
+			</div>
+			<div class="control-group">
+			  <label class="control-label" for="ime">Po&#353;ta</label>
+			  <div class="controls">
+				<input id="posta" name="posta" type="text" placeholder="" class="input-xlarge">
+				
+			  </div>
+			</div>
+			<div class="control-group">
+			  <label class="control-label" for="ime">Telefon</label>
+			  <div class="controls">
+				<input id="telefon" name="telefon" type="text" placeholder="" class="input-xlarge">
+				
+			  </div>
+			</div>
+			<div class="control-group">
+			  <label class="control-label" for="ime">Email</label>
+			  <div class="controls">
+				<input id="email" name="email" type="text" placeholder="" class="input-xlarge">
+				
+			  </div>
+			</div>
+
+</fieldset>
+</form>
+	</div>
+	</div>
+	
+	        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center">
+			<a href="#intro" class="btn btn-default btn-lg">NARO&#268;I!</a>
+      </div>
+    </div>
+	</div>
+	</div>
+    <!-- /Call to Action -->
+	
+	
+	
+	
+	    <!-- Intro -->
+
+	
+	<div id="intro" class="intro2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2>VEÈ</h2>
+			
+			
+			
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	<div id="intro" class="intro3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2>PRAVILA</h2>
+            <p class="lead">
+          </div>
+        </div>
+      </div>
+    </div>

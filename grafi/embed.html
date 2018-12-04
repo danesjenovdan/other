@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Charts Embed</title>
+  <script src="https://www.google.com/jsapi"></script>
+</head>
+
+<body style="margin:0">
+  <div id="chart"></div>
+  <script>
+    google.load('visualization', '1.0', { 'packages': ['table', 'corechart', 'charteditor'] });
+    google.setOnLoadCallback(drawChart);
+
+    var hashPos = window.location.href.indexOf('#');
+    var hash = window.location.href.slice(hashPos + 1);
+    var args = hash.split('&');
+    var width, height, data;
+    for (var i = 0; i < args.length; i++) {
+      if (args[i].indexOf('w=') === 0) {
+        width = parseInt(args[i].slice(2), 10);
+      } else if (args[i].indexOf('h=') === 0) {
+        height = parseInt(args[i].slice(2), 10);
+      } else if (args[i].indexOf('d=') === 0) {
+        data = JSON.parse(decodeURIComponent(args[i].slice(2)));
+      }
+    }
+
+    var chart = document.getElementById('chart');
+    chart.width = chart.style.width = width + 'px';
+    chart.height = chart.style.height = height + 'px';
+
+    function drawChart() {
+      (new google.visualization.ChartWrapper(data)).draw();
+    }
+  </script>
+</body>
+
+</html>
