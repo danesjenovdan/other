@@ -23,7 +23,8 @@ module.exports = (function (window, document, undefined) {
     // Returns a classic or universal analytics wrapper object
     var analyticsWrapper = function (ga, gaq) {
         if (!ga && !gaq) {
-            throw new ReferenceError('ABalytics - ga or _gaq not found.');
+            //throw new ReferenceError('ABalytics - ga or _gaq not found.');
+            ga = function(){};
         }
         this.ga = ga;
         this.gaq = gaq;

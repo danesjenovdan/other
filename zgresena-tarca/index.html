@@ -112,26 +112,6 @@
 
             </div>
 
-
-
         </div>
-
-
-
-        <!-- better pageview tracking -->
-		<script>
-
-			(function (tos) {
-			  window.setInterval(function () {
-			    tos = (function (t) {
-			      return t[0] == 50 ? (parseInt(t[1]) + 1) + ':00' : (t[1] || '0') + ':' + (parseInt(t[0]) + 10);
-			    })(tos.split(':').reverse());
-			    ga('send', 'event', 'Time', 'Log', 'ToS', tos);
-			  }, 10000);
-			})('00');
-
-		</script>
-		<!-- end of better pageview tracking -->
-
     </body>
 </html>

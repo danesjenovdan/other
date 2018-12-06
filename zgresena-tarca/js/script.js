@@ -8,7 +8,7 @@ $(document).ready(function() {
     $('.thebox').on('click', function() {
         $(this).toggleClass('checked');
 
-        ga('send', 'event', 'misc', 'toggled borut');
+        //ga('send', 'event', 'misc', 'toggled borut');
 
         return false;
     });
@@ -27,7 +27,7 @@ $(document).ready(function() {
             //this.style.display = "none";
             //clientText.setText( 'lalala' );
     //        alert("Copied text to clipboard: " + args.text );
-            ga('send', 'event', 'social', 'copied url');
+            //ga('send', 'event', 'social', 'copied url');
         });
     });
 
@@ -64,7 +64,7 @@ $(document).ready(function() {
         } else {
             alert('Kam pa naj pošljemo opomnik? Pozabil/a si vpisati naslove prejemnikov.');
         }
-        ga('send', 'event', 'misc', 'set reminder');
+        //ga('send', 'event', 'misc', 'set reminder');
         return false;
     });
 
@@ -130,7 +130,7 @@ $(document).ready(function() {
     // edit switch
     $('#content').on('focus', function() {
         //edited = true;
-        ga('send', 'event', 'misc', 'edited content');
+        //ga('send', 'event', 'misc', 'edited content');
     });
 
     // set counter
@@ -142,19 +142,19 @@ $(document).ready(function() {
     $('.fb').on('click', function() {
         url = 'https://www.facebook.com/dialog/feed?app_id=301375193309601&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent('http://danesjenovdan.si/zgresena-tarca/') + '&ref=responsive&name=' + encodeURIComponent('Zgrešena tarča')
         window.open(url, '_blank');
-        ga('send', 'event', 'social', 'facebook');
+        //ga('send', 'event', 'social', 'facebook');
         return false;
     });
     $('.tw').on('click', function() {
         url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('Na nacionalki so spet zgrešili Tarčo. http://djnd.si/bf cc @TarcaRTVSLO');
         window.open(url, '_blank');
-        ga('send', 'event', 'social', 'twitter');
+        //ga('send', 'event', 'social', 'twitter');
         return false;
     });
     $('.gp').on('click', function() {
         url = 'https://plus.google.com/share?url=' + encodeURIComponent('http://djnd.si/bf');
         window.open(url, '_blank');
-        ga('send', 'event', 'social', 'gplus');
+        //ga('send', 'event', 'social', 'gplus');
         return false;
     });
 

@@ -24,7 +24,7 @@ $(document).ready(function() {
     $('.thebox').on('click', function() {
         $(this).toggleClass('checked');
 
-        ga('send', 'event', 'misc', 'toggled borut');
+        //ga('send', 'event', 'misc', 'toggled borut');
 
         return false;
     });
@@ -45,7 +45,7 @@ $(document).ready(function() {
             //this.style.display = "none";
             //clientText.setText( 'lalala' );
     //        alert("Copied text to clipboard: " + args.text );
-            ga('send', 'event', 'social', 'copied url');
+            //ga('send', 'event', 'social', 'copied url');
         });
     });
 
@@ -54,32 +54,32 @@ $(document).ready(function() {
     // edit switch
     $('#content').on('focus', function() {
         edited = true;
-        ga('send', 'event', 'misc', 'edited content');
+        //ga('send', 'event', 'misc', 'edited content');
     });
 
     //social
     $('.fb').on('click', function() {
         var url = 'https://www.facebook.com/dialog/feed?app_id=301375193309601&redirect_uri=' + encodeURIComponent(document.location.href) + '&link=' + encodeURIComponent('http://danesjenovdan.si/heartbleed/') + '&ref=responsive&name=' + encodeURIComponent('Hrošč v srcu interneta')
         window.open(url, '_blank');
-        ga('send', 'event', 'social', 'facebook');
+        //ga('send', 'event', 'social', 'facebook');
         return false;
     });
     $('.tw').on('click', function() {
         var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('Preden vaši podatki doživijo srčni napad, od ponudnikov spletnih storitev zahtevajte, da ravnajo odgovorno. http://djnd.si/cz');
         window.open(url, '_blank');
-        ga('send', 'event', 'social', 'twitter');
+        //ga('send', 'event', 'social', 'twitter');
         return false;
     });
     $('.gp').on('click', function() {
         var url = 'https://plus.google.com/share?url=' + encodeURIComponent('http://djnd.si/cz');
         window.open(url, '_blank');
-        ga('send', 'event', 'social', 'gplus');
+        //ga('send', 'event', 'social', 'gplus');
         return false;
     });
     $('.email').on('click', function() {
         var url = 'mailto:?subject=Varnostna grožnja&body=Zdravo! Zanima nas, kaj boste/ste že storili glede pred kratkim izpostavljenega "heartbleed" exploita za SSL. Torej; kakšna je vaša trenutna implementacija in kdaj lahko uporabniki vaših storitev pričakujejo posodobitev/patch? Ker gre za veliko grožnjo, nas najbolj zanima, kdaj lahko pričakujemo, da bo napaka odpravljena. Lepo vas pozdravljajo odgovorni uporabniki in uporabnice interneta Zahvaljujemo se za čimprejšnji odgovor in takojšnjo ter odgovorno naslovitev grožnje. S konkretnimi dejanji dokažite, da je varnost vaših uporabnikov na prvem mestu.';
         window.open(url, '_blank');
-        ga('send', 'event', 'social', 'email');
+        //ga('send', 'event', 'social', 'email');
         return false;
     });
 
