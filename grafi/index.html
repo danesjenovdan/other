@@ -25,10 +25,10 @@
     <script src="https://www.google.com/jsapi"></script>
     <script>
         // Load the Visualization API and the charts package.
-        google.load('visualization', '1.0', {'packages':['table', 'corechart', 'charteditor']});
+        google.load('visualization', '1.0', {'packages':['table', 'corechart', 'charteditor', 'controls']});
     </script>
     <script>
-        $(function(){
+        google.charts.setOnLoadCallback(function(){
             hot.init();
             chart.init();
 
