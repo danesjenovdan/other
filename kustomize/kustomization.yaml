@@ -8,4 +8,4 @@ resources:
 images:
   - name: other
     newName: rg.fr-par.scw.cloud/djnd/other
-    newTag: "latest"
+    newTag: 'c84ef4b9e76f93716e4344d56bde8df8e6499738'
